@@ -7,9 +7,9 @@ pipeline {
     // }
     
     environment{
-        BUILD_SERVER_IP='ec2-user@172.31.8.148'
+        BUILD_SERVER_IP='ec2-user@172.31.8.154'
         IMAGE_NAME='devopstrainer/java-mvn-privaterepos'
-        DEPLOY_SERVER_IP='ec2-user@172.31.12.13'
+        DEPLOY_SERVER_IP='ec2-user@172.31.11.26'
     }
 
     stages {
@@ -46,7 +46,7 @@ pipeline {
 
                 script{
                      echo "Creating the docker image and Push to registry"
-                sshagent(['slave2']) {
+                sshagent(['slave3']) {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'password', usernameVariable: 'username')]) {
                 sh "scp -o StrictHostKeyChecking=no server-script.sh ${BUILD_SERVER_IP}:/home/ec2-user"
                 sh "ssh -o StrictHostKeyChecking=no ${BUILD_SERVER_IP} 'bash server-script.sh ${IMAGE_NAME} ${BUILD_NUMBER}'"

@@ -10,12 +10,12 @@ if [ -d "addressbook" ]
 then
    echo "repo is already cloned and exists"
    cd /home/ec2-user/addressbook
-   git checkout may-docker
-   git pull origin may-docker
+   git checkout venkat-docker
+   git pull origin venkat-docker
 else
    git clone https://github.com/preethid/addressbook.git
    cd /home/ec2-user/addressbook
-   git checkout may-docker
+   git checkout venkat-docker
 fi
 
 # mvn package
