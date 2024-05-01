@@ -13,7 +13,7 @@ then
    git checkout venkat-docker
    git pull origin venkat-docker
 else
-   git clone https://github.com/preethid/addressbook.git
+   git clone https://github.com/pkvenky56/addressbook.git
    cd /home/ec2-user/addressbook
    git checkout venkat-docker
 fi
