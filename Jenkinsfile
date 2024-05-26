@@ -6,8 +6,8 @@ pipeline {
         maven "mymaven"
     }
     environment{
-        BUILD_SERVER='ec2-user@172.31.42.86'
-        IMAGE_NAME='devopstrainer/java-mvn-privaterepos'
+        BUILD_SERVER='ec2-user@172.31.8.154'
+        IMAGE_NAME='pkvenkay56/java-mvn-privaterepos'
         //DEPLOY_SERVER='ec2-user@172.31.14.15'
         ACCESS_KEY=credentials('ACCESS_KEY')
         SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')
