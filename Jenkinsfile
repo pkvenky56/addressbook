@@ -10,7 +10,7 @@ pipeline {
         IMAGE_NAME='pkvenkay56/java-mvn-privaterepos'
         //DEPLOY_SERVER='ec2-user@172.31.14.15'
         ACCESS_KEY=credentials('ACCESS_KEY')
-        SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')
+        echo "SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')"
     }
     stages {
         stage('Compile') {
