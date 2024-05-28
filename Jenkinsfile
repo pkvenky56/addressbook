@@ -59,11 +59,11 @@ pipeline {
             }            
         }
         stage("Provision deploy server with TF"){
-             environment{
-                  ACCESS_KEY=credentials('ACCESS_KEY')
-                  SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')
-             }
-             agent any
+             //environment{
+              //    ACCESS_KEY=credentials('ACCESS_KEY')
+              //    SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')
+             //}
+             agent anyi
                    steps{
                        script{
                            dir('terraform'){
