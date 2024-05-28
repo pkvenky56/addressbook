@@ -63,7 +63,7 @@ pipeline {
               //    ACCESS_KEY=credentials('ACCESS_KEY')
               //    SECRET_ACCESS_KEY=credentials('SECRET_ACCESS_KEY')
              //}
-             agent anyi
+             agent any
                    steps{
                        script{
                            dir('terraform'){
