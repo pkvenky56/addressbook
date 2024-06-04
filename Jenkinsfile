@@ -74,7 +74,7 @@ pipeline {
                            sh 'aws configure set aws_access_key_id ${ACCESS_KEY}'
                            sh 'aws configure set aws_secret_access_key ${SECRET_ACCESS_KEY}'    
                            sh "terraform init"
-                           sh "terraform destroy"    
+                           sh "terraform destroy --auto-approve"    
                            //sh "terraform apply --auto-approve"
                            EC2_PUBLIC_IP = sh(
                             script: "terraform output instance-ip-0",
